@@ -1,0 +1,41 @@
+{
+  "Name": "BatteryBuddy",
+  "Description": "Muestra los niveles de batería de los dispositivos supervisados por BatteryBuddy.",
+  "com.dergln.batterybuddy.streamdeck.battery": {
+    "Name": "Batería BatteryBuddy",
+    "Tooltip": "Muestra el estado de la batería del dispositivo BatteryBuddy seleccionado."
+  },
+  "Localization": {
+    "BatteryBuddy device": "Dispositivo BatteryBuddy",
+    "Waiting for BatteryBuddy...": "Esperando BatteryBuddy...",
+    "Connecting to BatteryBuddy.": "Conectando a BatteryBuddy.",
+    "Unable to connect to Stream Deck. Reopen this key's settings.": "No se puede conectar a Stream Deck. Vuelva a abrir la configuración de esta tecla.",
+    "Disconnected from Stream Deck. Reopen this key's settings.": "Desconectado de Stream Deck. Vuelva a abrir la configuración de esta tecla.",
+    "Unable to save the selection: Stream Deck is disconnected. Reopen this key's settings.": "No se puede guardar la selección: Stream Deck está desconectado. Vuelva a abrir la configuración de esta tecla.",
+    "Select a device": "Seleccionar dispositivo",
+    "No devices available": "No hay dispositivos disponibles",
+    "Selected device (unavailable)": "Dispositivo seleccionado (no disponible)",
+    "Choose the device to display.": "Elija el dispositivo que desea mostrar.",
+    "BatteryBuddy is connected but has no devices.": "BatteryBuddy está conectado pero no tiene dispositivos.",
+    "Connecting to BatteryBuddy...": "Conectando a BatteryBuddy...",
+    "BatteryBuddy sent data that this plugin could not use.": "BatteryBuddy envió datos que este plugin no pudo usar.",
+    "BatteryBuddy is not running for this Windows user.": "BatteryBuddy no se está ejecutando para este usuario de Windows.",
+    "Connecting": "Conectando",
+    "BatteryBuddy\noffline": "BatteryBuddy\nsin conexión",
+    "Invalid pipe\ndata": "Datos de pipe\nno válidos",
+    "Waiting for\ndata": "Esperando\ndatos",
+    "Select a\ndevice": "Seleccionar\ndispositivo",
+    "Device\nunavailable": "Dispositivo\nno disponible",
+    "Unknown": "Desconocido",
+    "Other": "Otro",
+    "Headset": "Auriculares con micrófono",
+    "Mouse": "Ratón",
+    "Keyboard": "Teclado",
+    "Gamepad": "Mando",
+    "Phone": "Teléfono",
+    "Speaker": "Altavoz",
+    "Internal battery": "Batería interna",
+    "Pen": "Lápiz",
+    "Earbuds": "Auriculares intraaurales"
+  }
+}

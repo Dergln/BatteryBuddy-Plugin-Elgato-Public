@@ -32,7 +32,14 @@ A custom title replaces this text; a space can be used for an icon-only key.
 Custom images override the dynamic battery icon. Existing keys may retain
 previous font settings; long device names can still clip.
 
-The interface is currently English-only. Grey means a neutral state, or an older
+The interface follows Stream Deck's language: English, German, French, Spanish,
+Japanese, Korean, Simplified Chinese and Traditional Chinese. This includes the
+action name/tooltip, device selector and categories, status messages and generated
+key-state text. Device names and custom titles are not translated. Unsupported
+languages fall back to English; restart Stream Deck after changing its language.
+Translations are AI-reviewed drafts, not certified native-speaker translations.
+
+Grey means a neutral state, or an older
 BatteryBuddy build that does not supply colours; update BatteryBuddy if
 percentages appear but the icon remains grey.
 

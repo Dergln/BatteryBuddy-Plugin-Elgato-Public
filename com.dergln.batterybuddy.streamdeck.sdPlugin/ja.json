@@ -1,0 +1,41 @@
+{
+  "Name": "BatteryBuddy",
+  "Description": "BatteryBuddyで監視されているデバイスのバッテリー残量を表示します。",
+  "com.dergln.batterybuddy.streamdeck.battery": {
+    "Name": "BatteryBuddy バッテリー",
+    "Tooltip": "選択したBatteryBuddyデバイスのバッテリー状態を表示します。"
+  },
+  "Localization": {
+    "BatteryBuddy device": "BatteryBuddyデバイス",
+    "Waiting for BatteryBuddy...": "BatteryBuddyを待機中...",
+    "Connecting to BatteryBuddy.": "BatteryBuddyに接続中。",
+    "Unable to connect to Stream Deck. Reopen this key's settings.": "Stream Deckに接続できません。このキーの設定を再度開いてください。",
+    "Disconnected from Stream Deck. Reopen this key's settings.": "Stream Deckとの接続が切れました。このキーの設定を再度開いてください。",
+    "Unable to save the selection: Stream Deck is disconnected. Reopen this key's settings.": "選択を保存できません：Stream Deckとの接続が切れています。このキーの設定を再度開いてください。",
+    "Select a device": "デバイスを選択",
+    "No devices available": "利用可能なデバイスがありません",
+    "Selected device (unavailable)": "選択したデバイス（利用不可）",
+    "Choose the device to display.": "表示するデバイスを選択してください。",
+    "BatteryBuddy is connected but has no devices.": "BatteryBuddyは接続されていますが、デバイスがありません。",
+    "Connecting to BatteryBuddy...": "BatteryBuddyに接続中...",
+    "BatteryBuddy sent data that this plugin could not use.": "BatteryBuddyからこのプラグインが使用できないデータが送信されました。",
+    "BatteryBuddy is not running for this Windows user.": "BatteryBuddyはこのWindowsユーザーで実行されていません。",
+    "Connecting": "接続中",
+    "BatteryBuddy\noffline": "BatteryBuddy\nオフライン",
+    "Invalid pipe\ndata": "無効なパイプ\nデータ",
+    "Waiting for\ndata": "データ\n待機中",
+    "Select a\ndevice": "デバイス\nを選択",
+    "Device\nunavailable": "デバイス\n利用不可",
+    "Unknown": "不明",
+    "Other": "その他",
+    "Headset": "ヘッドセット",
+    "Mouse": "マウス",
+    "Keyboard": "キーボード",
+    "Gamepad": "ゲームパッド",
+    "Phone": "スマートフォン",
+    "Speaker": "スピーカー",
+    "Internal battery": "内蔵バッテリー",
+    "Pen": "ペン",
+    "Earbuds": "イヤホン"
+  }
+}

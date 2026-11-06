@@ -1,0 +1,41 @@
+{
+  "Name": "BatteryBuddy",
+  "Description": "Akkustände der von BatteryBuddy überwachten Geräte anzeigen.",
+  "com.dergln.batterybuddy.streamdeck.battery": {
+    "Name": "BatteryBuddy-Akku",
+    "Tooltip": "Zeigt den Akkustand des ausgewählten BatteryBuddy-Geräts an."
+  },
+  "Localization": {
+    "BatteryBuddy device": "BatteryBuddy-Gerät",
+    "Waiting for BatteryBuddy...": "Warten auf BatteryBuddy...",
+    "Connecting to BatteryBuddy.": "Verbindung mit BatteryBuddy wird hergestellt.",
+    "Unable to connect to Stream Deck. Reopen this key's settings.": "Keine Verbindung mit Stream Deck möglich. Öffne die Einstellungen dieser Taste erneut.",
+    "Disconnected from Stream Deck. Reopen this key's settings.": "Verbindung mit Stream Deck getrennt. Öffne die Einstellungen dieser Taste erneut.",
+    "Unable to save the selection: Stream Deck is disconnected. Reopen this key's settings.": "Auswahl nicht gespeichert: Die Verbindung mit Stream Deck ist getrennt. Öffne die Einstellungen dieser Taste erneut.",
+    "Select a device": "Gerät auswählen",
+    "No devices available": "Keine Geräte verfügbar",
+    "Selected device (unavailable)": "Ausgewähltes Gerät (nicht verfügbar)",
+    "Choose the device to display.": "Wähle das Gerät aus, das angezeigt werden soll.",
+    "BatteryBuddy is connected but has no devices.": "BatteryBuddy ist verbunden, hat aber keine Geräte.",
+    "Connecting to BatteryBuddy...": "Verbindung mit BatteryBuddy wird hergestellt...",
+    "BatteryBuddy sent data that this plugin could not use.": "BatteryBuddy hat Daten gesendet, die dieses Plugin nicht verarbeiten konnte.",
+    "BatteryBuddy is not running for this Windows user.": "BatteryBuddy läuft nicht für diesen Windows-Benutzer.",
+    "Connecting": "Verbinden",
+    "BatteryBuddy\noffline": "BatteryBuddy\noffline",
+    "Invalid pipe\ndata": "Ungültige\nPipe-Daten",
+    "Waiting for\ndata": "Warten auf\nDaten",
+    "Select a\ndevice": "Gerät\nauswählen",
+    "Device\nunavailable": "Gerät nicht\nverfügbar",
+    "Unknown": "Unbekannt",
+    "Other": "Sonstige",
+    "Headset": "Headset",
+    "Mouse": "Maus",
+    "Keyboard": "Tastatur",
+    "Gamepad": "Gamepad",
+    "Phone": "Telefon",
+    "Speaker": "Lautsprecher",
+    "Internal battery": "Interner Akku",
+    "Pen": "Stift",
+    "Earbuds": "Ohrhörer"
+  }
+}

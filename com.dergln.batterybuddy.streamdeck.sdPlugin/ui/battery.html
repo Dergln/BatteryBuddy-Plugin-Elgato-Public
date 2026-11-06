@@ -31,7 +31,7 @@
   </style>
 </head>
 <body>
-  <label for="device">BatteryBuddy device</label>
+  <label id="device-label" for="device">BatteryBuddy device</label>
   <select id="device" disabled>
     <option value="">Waiting for BatteryBuddy...</option>
   </select>
@@ -44,11 +44,59 @@
     let selectedDeviceId = "";
     let devices = [];
     let connectionStatus = "disconnected";
+    let localization = {};
 
     const deviceSelect = document.getElementById("device");
     const status = document.getElementById("status");
 
-    function connectElgatoStreamDeckSocket(port, uuid, registerEvent, info, actionInfo) {
+    const translate = (key) => Object.hasOwn(localization, key) ? localization[key] : key;
+
+    async function loadLocalization(language) {
+      const locale = typeof language === "string" ? language.replace("-", "_") : "en";
+      const supported = ["de", "es", "fr", "ja", "ko", "zh_CN", "zh_TW"];
+      const selected = supported.includes(locale) ? locale : "en";
+      document.documentElement.lang = selected.replace("_", "-");
+      if (selected === "en") {
+        return;
+      }
+
+      try {
+        localization = await new Promise((resolve, reject) => {
+          // Stream Deck loads inspectors from local files, so use XHR rather than fetch.
+          const request = new XMLHttpRequest();
+          request.open("GET", `../${selected}.json`);
+          request.timeout = 5000;
+          request.onload = () => {
+            try {
+              if (request.status !== 0 && request.status !== 200) {
+                throw new Error(`Localization HTTP status ${request.status}`);
+              }
+              const strings = JSON.parse(request.responseText).Localization;
+              if (!strings || typeof strings !== "object" || Array.isArray(strings)
+                  || Object.values(strings).some((value) => typeof value !== "string")) {
+                throw new Error("Invalid localization resource");
+              }
+              resolve(strings);
+            } catch (error) {
+              reject(error);
+            }
+          };
+          request.onerror = () => reject(new Error("Unable to read localization resource"));
+          request.ontimeout = () => reject(new Error("Localization resource timed out"));
+          request.send();
+        });
+      } catch (error) {
+        console.error(`Unable to load ${selected} localization; using English.`, error);
+        document.documentElement.lang = "en";
+      }
+    }
+
+    async function connectElgatoStreamDeckSocket(port, uuid, registerEvent, info, actionInfo) {
+      await loadLocalization(JSON.parse(info).application?.language);
+      document.title = translate("BatteryBuddy device");
+      document.getElementById("device-label").textContent = translate("BatteryBuddy device");
+      deviceSelect.options[0].textContent = translate("Waiting for BatteryBuddy...");
+      status.textContent = translate("Connecting to BatteryBuddy.");
       pluginUuid = uuid;
       const action = JSON.parse(actionInfo);
       actionUuid = action.action;
@@ -74,11 +122,11 @@
         sendCommand("setSettings", settings);
       });
       websocket.onerror = () => {
-        status.textContent = "Unable to connect to Stream Deck. Reopen this key's settings.";
+        status.textContent = translate("Unable to connect to Stream Deck. Reopen this key's settings.");
         deviceSelect.disabled = true;
       };
       websocket.onclose = () => {
-        status.textContent = "Disconnected from Stream Deck. Reopen this key's settings.";
+        status.textContent = translate("Disconnected from Stream Deck. Reopen this key's settings.");
         deviceSelect.disabled = true;
       };
     }
@@ -93,7 +141,7 @@
           payload
         }));
       } else {
-        status.textContent = "Unable to save the selection: Stream Deck is disconnected. Reopen this key's settings.";
+        status.textContent = translate("Unable to save the selection: Stream Deck is disconnected. Reopen this key's settings.");
         deviceSelect.disabled = true;
       }
     }
@@ -112,33 +160,34 @@
       deviceSelect.replaceChildren();
       const placeholder = document.createElement("option");
       placeholder.value = "";
-      placeholder.textContent = devices.length ? "Select a device" : "No devices available";
+      placeholder.textContent = translate(devices.length ? "Select a device" : "No devices available");
       deviceSelect.append(placeholder);
 
       for (const device of devices) {
         const option = document.createElement("option");
         option.value = device.id;
-        option.textContent = `${device.name} (${device.category})`;
+        const category = device.category === "InternalBattery" ? "Internal battery" : device.category;
+        option.textContent = `${device.name} (${translate(category)})`;
         deviceSelect.append(option);
       }
 
       if (selectedDeviceId && !devices.some((device) => device.id === selectedDeviceId)) {
         const unavailable = document.createElement("option");
         unavailable.value = selectedDeviceId;
-        unavailable.textContent = "Selected device (unavailable)";
+        unavailable.textContent = translate("Selected device (unavailable)");
         deviceSelect.append(unavailable);
       }
       deviceSelect.value = selectedDeviceId;
       deviceSelect.disabled = devices.length === 0;
 
       if (connectionStatus === "connected") {
-        status.textContent = devices.length ? "Choose the device to display." : "BatteryBuddy is connected but has no devices.";
+        status.textContent = translate(devices.length ? "Choose the device to display." : "BatteryBuddy is connected but has no devices.");
       } else if (connectionStatus === "connecting") {
-        status.textContent = "Connecting to BatteryBuddy...";
+        status.textContent = translate("Connecting to BatteryBuddy...");
       } else if (connectionStatus === "invalid") {
-        status.textContent = "BatteryBuddy sent data that this plugin could not use.";
+        status.textContent = translate("BatteryBuddy sent data that this plugin could not use.");
       } else {
-        status.textContent = "BatteryBuddy is not running for this Windows user.";
+        status.textContent = translate("BatteryBuddy is not running for this Windows user.");
       }
     }
   </script>

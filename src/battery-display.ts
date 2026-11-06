@@ -3,27 +3,32 @@ import { isBatteryColor } from "./pipe-protocol";
 
 const neutralColor = "#B4B4B4";
 
-export function batteryDisplay(state: PipeClientState, deviceId?: string): { title: string; image: string } {
+export function batteryDisplay(
+  state: PipeClientState,
+  deviceId?: string,
+  translate: (key: string) => string = (key) => key
+): { title: string; image: string } {
   const { status, snapshot } = state;
   let title: string;
   let color = neutralColor;
 
   if (status === "connecting") {
-    title = "Connecting...";
+    // SDK translation keys use dots as object-path separators.
+    title = `${translate("Connecting")}...`;
   } else if (status === "disconnected") {
-    title = "BatteryBuddy\noffline";
+    title = translate("BatteryBuddy\noffline");
   } else if (status === "invalid") {
-    title = "Invalid pipe\ndata";
+    title = translate("Invalid pipe\ndata");
   } else if (!snapshot) {
-    title = "Waiting for\ndata";
+    title = translate("Waiting for\ndata");
   } else if (!deviceId) {
-    title = "Select a\ndevice";
+    title = translate("Select a\ndevice");
   } else {
     const device = snapshot.devices.find((item) => item.id === deviceId);
     if (!device) {
-      title = "Device\nunavailable";
+      title = translate("Device\nunavailable");
     } else if (device.level === null) {
-      title = `${device.name}\nUnknown`;
+      title = `${device.name}\n${translate("Unknown")}`;
     } else {
       title = `${device.name}\n${device.level}%${device.isCharging ? " \u26a1" : ""}`;
       if (isBatteryColor(device.color)) {

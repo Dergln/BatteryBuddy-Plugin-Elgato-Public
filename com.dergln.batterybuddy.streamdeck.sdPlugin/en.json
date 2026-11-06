@@ -1,0 +1,41 @@
+{
+  "Name": "BatteryBuddy",
+  "Description": "Display battery levels for devices monitored by BatteryBuddy.",
+  "com.dergln.batterybuddy.streamdeck.battery": {
+    "Name": "BatteryBuddy Battery",
+    "Tooltip": "Displays the selected BatteryBuddy device battery status."
+  },
+  "Localization": {
+    "BatteryBuddy device": "BatteryBuddy device",
+    "Waiting for BatteryBuddy...": "Waiting for BatteryBuddy...",
+    "Connecting to BatteryBuddy.": "Connecting to BatteryBuddy.",
+    "Unable to connect to Stream Deck. Reopen this key's settings.": "Unable to connect to Stream Deck. Reopen this key's settings.",
+    "Disconnected from Stream Deck. Reopen this key's settings.": "Disconnected from Stream Deck. Reopen this key's settings.",
+    "Unable to save the selection: Stream Deck is disconnected. Reopen this key's settings.": "Unable to save the selection: Stream Deck is disconnected. Reopen this key's settings.",
+    "Select a device": "Select a device",
+    "No devices available": "No devices available",
+    "Selected device (unavailable)": "Selected device (unavailable)",
+    "Choose the device to display.": "Choose the device to display.",
+    "BatteryBuddy is connected but has no devices.": "BatteryBuddy is connected but has no devices.",
+    "Connecting to BatteryBuddy...": "Connecting to BatteryBuddy...",
+    "BatteryBuddy sent data that this plugin could not use.": "BatteryBuddy sent data that this plugin could not use.",
+    "BatteryBuddy is not running for this Windows user.": "BatteryBuddy is not running for this Windows user.",
+    "Connecting": "Connecting",
+    "BatteryBuddy\noffline": "BatteryBuddy\noffline",
+    "Invalid pipe\ndata": "Invalid pipe\ndata",
+    "Waiting for\ndata": "Waiting for\ndata",
+    "Select a\ndevice": "Select a\ndevice",
+    "Device\nunavailable": "Device\nunavailable",
+    "Unknown": "Unknown",
+    "Other": "Other",
+    "Headset": "Headset",
+    "Mouse": "Mouse",
+    "Keyboard": "Keyboard",
+    "Gamepad": "Gamepad",
+    "Phone": "Phone",
+    "Speaker": "Speaker",
+    "Internal battery": "Internal battery",
+    "Pen": "Pen",
+    "Earbuds": "Earbuds"
+  }
+}

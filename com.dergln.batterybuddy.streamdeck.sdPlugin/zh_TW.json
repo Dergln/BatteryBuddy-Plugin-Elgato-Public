@@ -1,0 +1,41 @@
+{
+  "Name": "BatteryBuddy",
+  "Description": "顯示由 BatteryBuddy 監控之裝置的電池電量。",
+  "com.dergln.batterybuddy.streamdeck.battery": {
+    "Name": "BatteryBuddy 電池",
+    "Tooltip": "顯示所選 BatteryBuddy 裝置的電池狀態。"
+  },
+  "Localization": {
+    "BatteryBuddy device": "BatteryBuddy 裝置",
+    "Waiting for BatteryBuddy...": "等待 BatteryBuddy...",
+    "Connecting to BatteryBuddy.": "正在連線至 BatteryBuddy。",
+    "Unable to connect to Stream Deck. Reopen this key's settings.": "無法連線至 Stream Deck。請重新開啟此按鍵的設定。",
+    "Disconnected from Stream Deck. Reopen this key's settings.": "已與 Stream Deck 斷開連線。請重新開啟此按鍵的設定。",
+    "Unable to save the selection: Stream Deck is disconnected. Reopen this key's settings.": "無法儲存選擇：Stream Deck 已斷開連線。請重新開啟此按鍵的設定。",
+    "Select a device": "選擇裝置",
+    "No devices available": "沒有可用裝置",
+    "Selected device (unavailable)": "已選裝置（不可用）",
+    "Choose the device to display.": "選擇要顯示的裝置。",
+    "BatteryBuddy is connected but has no devices.": "BatteryBuddy 已連線但沒有裝置。",
+    "Connecting to BatteryBuddy...": "正在連線至 BatteryBuddy...",
+    "BatteryBuddy sent data that this plugin could not use.": "BatteryBuddy 傳送了此外掛程式無法使用的資料。",
+    "BatteryBuddy is not running for this Windows user.": "BatteryBuddy 未在此 Windows 使用者下執行。",
+    "Connecting": "連線中",
+    "BatteryBuddy\noffline": "BatteryBuddy\n離線",
+    "Invalid pipe\ndata": "無效的管道\n資料",
+    "Waiting for\ndata": "等待\n資料",
+    "Select a\ndevice": "選擇\n裝置",
+    "Device\nunavailable": "裝置\n不可用",
+    "Unknown": "未知",
+    "Other": "其他",
+    "Headset": "頭戴式耳機",
+    "Mouse": "滑鼠",
+    "Keyboard": "鍵盤",
+    "Gamepad": "遊戲手把",
+    "Phone": "手機",
+    "Speaker": "喇叭",
+    "Internal battery": "內建電池",
+    "Pen": "觸控筆",
+    "Earbuds": "耳塞式耳機"
+  }
+}

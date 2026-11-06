@@ -1,0 +1,41 @@
+{
+  "Name": "BatteryBuddy",
+  "Description": "Afficher les niveaux de batterie des périphériques surveillés par BatteryBuddy.",
+  "com.dergln.batterybuddy.streamdeck.battery": {
+    "Name": "Batterie BatteryBuddy",
+    "Tooltip": "Affiche l'état de la batterie du périphérique BatteryBuddy sélectionné."
+  },
+  "Localization": {
+    "BatteryBuddy device": "Périphérique BatteryBuddy",
+    "Waiting for BatteryBuddy...": "En attente de BatteryBuddy...",
+    "Connecting to BatteryBuddy.": "Connexion à BatteryBuddy.",
+    "Unable to connect to Stream Deck. Reopen this key's settings.": "Impossible de se connecter à Stream Deck. Rouvrez les paramètres de cette touche.",
+    "Disconnected from Stream Deck. Reopen this key's settings.": "Déconnecté de Stream Deck. Rouvrez les paramètres de cette touche.",
+    "Unable to save the selection: Stream Deck is disconnected. Reopen this key's settings.": "Impossible d'enregistrer la sélection : Stream Deck est déconnecté. Rouvrez les paramètres de cette touche.",
+    "Select a device": "Sélectionner un périphérique",
+    "No devices available": "Aucun périphérique disponible",
+    "Selected device (unavailable)": "Périphérique sélectionné (indisponible)",
+    "Choose the device to display.": "Choisissez le périphérique à afficher.",
+    "BatteryBuddy is connected but has no devices.": "BatteryBuddy est connecté mais n'a aucun périphérique.",
+    "Connecting to BatteryBuddy...": "Connexion à BatteryBuddy...",
+    "BatteryBuddy sent data that this plugin could not use.": "BatteryBuddy a envoyé des données que ce plugin n'a pas pu utiliser.",
+    "BatteryBuddy is not running for this Windows user.": "BatteryBuddy n'est pas en cours d'exécution pour cet utilisateur Windows.",
+    "Connecting": "Connexion",
+    "BatteryBuddy\noffline": "BatteryBuddy\nhors ligne",
+    "Invalid pipe\ndata": "Données de\npipe invalides",
+    "Waiting for\ndata": "En attente de\ndonnées",
+    "Select a\ndevice": "Choisir un\npériphérique",
+    "Device\nunavailable": "Périphérique\nindisponible",
+    "Unknown": "Inconnu",
+    "Other": "Autre",
+    "Headset": "Casque",
+    "Mouse": "Souris",
+    "Keyboard": "Clavier",
+    "Gamepad": "Manette",
+    "Phone": "Téléphone",
+    "Speaker": "Haut-parleur",
+    "Internal battery": "Batterie interne",
+    "Pen": "Stylet",
+    "Earbuds": "Écouteurs"
+  }
+}
