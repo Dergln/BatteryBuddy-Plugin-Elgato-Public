@@ -1,0 +1,6 @@
+node_modules/
+.test-build/
+com.dergln.batterybuddy.streamdeck.sdPlugin/bin/
+com.dergln.batterybuddy.streamdeck.sdPlugin/logs/
+dist/
+*.streamDeckPlugin

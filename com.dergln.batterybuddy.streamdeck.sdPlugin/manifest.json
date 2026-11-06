@@ -1,0 +1,47 @@
+{
+  "$schema": "https://schemas.elgato.com/streamdeck/plugins/manifest.json",
+  "Actions": [
+    {
+      "Controllers": [
+        "Keypad"
+      ],
+      "Icon": "imgs/batterybuddy",
+      "Name": "BatteryBuddy Battery",
+      "PropertyInspectorPath": "ui/battery.html",
+      "States": [
+        {
+          "FontSize": 10,
+          "Image": "imgs/batterybuddy",
+          "TitleAlignment": "middle",
+          "TitleColor": "#FFFFFF"
+        }
+      ],
+      "Tooltip": "Displays the selected BatteryBuddy device battery status.",
+      "UserTitleEnabled": true,
+      "UUID": "com.dergln.batterybuddy.streamdeck.battery"
+    }
+  ],
+  "Author": "Dergln",
+  "Category": "BatteryBuddy",
+  "CategoryIcon": "imgs/batterybuddy",
+  "CodePath": "bin/plugin.js",
+  "Description": "Display battery levels for devices monitored by BatteryBuddy.",
+  "Icon": "imgs/plugin",
+  "Name": "BatteryBuddy",
+  "Nodejs": {
+    "Version": "24"
+  },
+  "OS": [
+    {
+      "MinimumVersion": "10",
+      "Platform": "windows"
+    }
+  ],
+  "SDKVersion": 3,
+  "Software": {
+    "MinimumVersion": "7.1"
+  },
+  "SupportURL": "https://github.com/Dergln/BatteryBuddy-Plugin-Elgato-Public/issues",
+  "UUID": "com.dergln.batterybuddy.streamdeck",
+  "Version": "1.0.0.0"
+}

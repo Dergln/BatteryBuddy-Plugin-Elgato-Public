@@ -1,0 +1,9 @@
+.git/
+.github/
+.test-build/
+node_modules/
+src/
+tests/
+dist/
+*.log
+*.map

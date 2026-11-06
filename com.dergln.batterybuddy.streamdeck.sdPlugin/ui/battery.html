@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BatteryBuddy Battery</title>
+  <style>
+    body {
+      color: #e6e6e6;
+      font: 13px system-ui, sans-serif;
+      margin: 0;
+      padding: 12px;
+    }
+
+    label {
+      display: block;
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+
+    select {
+      box-sizing: border-box;
+      width: 100%;
+    }
+
+    #status {
+      color: #a7a7a7;
+      line-height: 1.4;
+      margin-top: 8px;
+    }
+  </style>
+</head>
+<body>
+  <label for="device">BatteryBuddy device</label>
+  <select id="device" disabled>
+    <option value="">Waiting for BatteryBuddy...</option>
+  </select>
+  <div id="status" role="status" aria-live="polite">Connecting to BatteryBuddy.</div>
+  <script>
+    let websocket;
+    let pluginUuid;
+    let actionUuid;
+    let settings = {};
+    let selectedDeviceId = "";
+    let devices = [];
+    let connectionStatus = "disconnected";
+
+    const deviceSelect = document.getElementById("device");
+    const status = document.getElementById("status");
+
+    function connectElgatoStreamDeckSocket(port, uuid, registerEvent, info, actionInfo) {
+      pluginUuid = uuid;
+      const action = JSON.parse(actionInfo);
+      actionUuid = action.action;
+      settings = action.payload?.settings ?? {};
+      selectedDeviceId = settings.deviceId ?? "";
+      websocket = new WebSocket(`ws://127.0.0.1:${port}`);
+      websocket.onopen = () => {
+        websocket.send(JSON.stringify({ event: registerEvent, uuid: pluginUuid }));
+      };
+      websocket.onmessage = (message) => {
+        const data = JSON.parse(message.data);
+        if (data.event === "sendToPropertyInspector") {
+          updateDeviceList(data.payload);
+        } else if (data.event === "didReceiveSettings") {
+          settings = data.payload?.settings ?? {};
+          selectedDeviceId = settings.deviceId ?? "";
+          render();
+        }
+      };
+      deviceSelect.addEventListener("change", () => {
+        selectedDeviceId = deviceSelect.value;
+        settings = { ...settings, deviceId: selectedDeviceId };
+        sendCommand("setSettings", settings);
+      });
+      websocket.onerror = () => {
+        status.textContent = "Unable to connect to Stream Deck. Reopen this key's settings.";
+        deviceSelect.disabled = true;
+      };
+      websocket.onclose = () => {
+        status.textContent = "Disconnected from Stream Deck. Reopen this key's settings.";
+        deviceSelect.disabled = true;
+      };
+    }
+
+    function sendCommand(event, payload) {
+      if (websocket?.readyState === WebSocket.OPEN) {
+        websocket.send(JSON.stringify({
+          event,
+          action: actionUuid,
+          // Inspector commands use its registration UUID, not actionInfo.context.
+          context: pluginUuid,
+          payload
+        }));
+      } else {
+        status.textContent = "Unable to save the selection: Stream Deck is disconnected. Reopen this key's settings.";
+        deviceSelect.disabled = true;
+      }
+    }
+
+    function updateDeviceList(payload) {
+      if (payload?.type !== "devices" || !Array.isArray(payload.devices)) {
+        return;
+      }
+
+      devices = payload.devices;
+      connectionStatus = payload.status;
+      render();
+    }
+
+    function render() {
+      deviceSelect.replaceChildren();
+      const placeholder = document.createElement("option");
+      placeholder.value = "";
+      placeholder.textContent = devices.length ? "Select a device" : "No devices available";
+      deviceSelect.append(placeholder);
+
+      for (const device of devices) {
+        const option = document.createElement("option");
+        option.value = device.id;
+        option.textContent = `${device.name} (${device.category})`;
+        deviceSelect.append(option);
+      }
+
+      if (selectedDeviceId && !devices.some((device) => device.id === selectedDeviceId)) {
+        const unavailable = document.createElement("option");
+        unavailable.value = selectedDeviceId;
+        unavailable.textContent = "Selected device (unavailable)";
+        deviceSelect.append(unavailable);
+      }
+      deviceSelect.value = selectedDeviceId;
+      deviceSelect.disabled = devices.length === 0;
+
+      if (connectionStatus === "connected") {
+        status.textContent = devices.length ? "Choose the device to display." : "BatteryBuddy is connected but has no devices.";
+      } else if (connectionStatus === "connecting") {
+        status.textContent = "Connecting to BatteryBuddy...";
+      } else if (connectionStatus === "invalid") {
+        status.textContent = "BatteryBuddy sent data that this plugin could not use.";
+      } else {
+        status.textContent = "BatteryBuddy is not running for this Windows user.";
+      }
+    }
+  </script>
+</body>
+</html>
