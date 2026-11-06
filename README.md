@@ -32,6 +32,9 @@ A custom title replaces this text; a space can be used for an icon-only key.
 Custom images override the dynamic battery icon. Existing keys may retain
 previous font settings; long device names can still clip.
 
+<img width="350" height="171" alt="BatteryBuddy-Plugin-Elgato_1" src="https://github.com/user-attachments/assets/8f016624-052d-42a2-8680-71e81b315e54" /> <img width="350" height="170" alt="BatteryBuddy-Plugin-Elgato_2" src="https://github.com/user-attachments/assets/7ea480d8-d2d4-445d-8568-4fcdfc3843aa" />
+<img width="225" height="500" alt="BatteryBuddy-Plugin-Elgato_3" src="https://github.com/user-attachments/assets/5df627d8-0cbd-4d03-8130-7fc66ab9acf3" />
+
 The interface follows Stream Deck's language: English, German, French, Spanish,
 Japanese, Korean, Simplified Chinese and Traditional Chinese. This includes the
 action name/tooltip, device selector and categories, status messages and generated
