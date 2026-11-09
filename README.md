@@ -33,16 +33,16 @@ with the desktop app.
 The key title is empty by default. User-defined titles and custom images remain
 available in Stream Deck; a custom image replaces the dynamic battery icon.
 
-<img width="800" height="572" alt="image" src="https://github.com/user-attachments/assets/4be03e2d-1e30-4f60-a1f0-a4d440ccab04" />
+The screenshots show the current key design and per-device setup, with examples
+of the live ring at different battery states.
 
-<img width="800" height="341" alt="image" src="https://github.com/user-attachments/assets/5635633e-56e4-40fb-988a-34a0de2a6991" />
+<img width="800" height="572" alt="Stream Deck showing the BatteryBuddy key and device selector" src="https://github.com/user-attachments/assets/4be03e2d-1e30-4f60-a1f0-a4d440ccab04" />
 
-<img width="800" height="341" alt="image" src="https://github.com/user-attachments/assets/7b7f7946-4fff-4629-b6a3-56fbeaf2f43f" />
+<img width="800" height="341" alt="BatteryBuddy key with green and amber battery rings beside device settings" src="https://github.com/user-attachments/assets/5635633e-56e4-40fb-988a-34a0de2a6991" />
 
-<img width="800" height="340" alt="image" src="https://github.com/user-attachments/assets/64890208-ccc0-4895-8a06-0b6ae6d92930" />
+<img width="800" height="341" alt="BatteryBuddy key with a red low-battery ring beside device settings" src="https://github.com/user-attachments/assets/7b7f7946-4fff-4629-b6a3-56fbeaf2f43f" />
 
-These screenshots show the earlier 1.1.0 interface; the live key artwork and
-default title behavior have since been updated.
+<img width="800" height="340" alt="BatteryBuddy key with a burgundy critical-battery ring beside device settings" src="https://github.com/user-attachments/assets/64890208-ccc0-4895-8a06-0b6ae6d92930" />
 
 The interface follows Stream Deck's language: English, German, French, Spanish,
 Japanese, Korean, Simplified Chinese and Traditional Chinese. This includes the
