@@ -33,8 +33,13 @@ with the desktop app.
 The key title is empty by default. User-defined titles and custom images remain
 available in Stream Deck; a custom image replaces the dynamic battery icon.
 
-<img width="350" height="171" alt="BatteryBuddy-Plugin-Elgato_1" src="https://github.com/user-attachments/assets/8f016624-052d-42a2-8680-71e81b315e54" /> <img width="350" height="170" alt="BatteryBuddy-Plugin-Elgato_2" src="https://github.com/user-attachments/assets/7ea480d8-d2d4-445d-8568-4fcdfc3843aa" />
-<img width="225" height="500" alt="BatteryBuddy-Plugin-Elgato_3" src="https://github.com/user-attachments/assets/5df627d8-0cbd-4d03-8130-7fc66ab9acf3" />
+<img width="800" height="572" alt="image" src="https://github.com/user-attachments/assets/4be03e2d-1e30-4f60-a1f0-a4d440ccab04" />
+
+<img width="800" height="341" alt="image" src="https://github.com/user-attachments/assets/5635633e-56e4-40fb-988a-34a0de2a6991" />
+
+<img width="800" height="341" alt="image" src="https://github.com/user-attachments/assets/7b7f7946-4fff-4629-b6a3-56fbeaf2f43f" />
+
+<img width="800" height="340" alt="image" src="https://github.com/user-attachments/assets/64890208-ccc0-4895-8a06-0b6ae6d92930" />
 
 These screenshots show the earlier 1.1.0 interface; the live key artwork and
 default title behavior have since been updated.
