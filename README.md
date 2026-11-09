@@ -1,8 +1,8 @@
 # BatteryBuddy Stream Deck Plugin
 
-Display your devices' battery levels directly on Elgato Stream Deck or Stream
-Deck Mobile. Choose a device for each key and see its percentage, charging state
-and BatteryBuddy's configured warning colour at a glance.
+Display your devices' battery state directly on Elgato Stream Deck or Stream
+Deck Mobile. Choose a device for each key and see its category icon surrounded
+by a colour-coded battery ring.
 
 ## Download and setup
 
@@ -19,28 +19,32 @@ with the desktop app.
 ## Features
 
 - Independent device selection for each key, remembered across restarts.
-- Live percentages and charging indication.
-- Icon colours follow BatteryBuddy's effective device thresholds; saved device
+- Category icons inside a four-segment ring: four green segments for full, three
+  amber for medium, two red for low and one burgundy for critical.
+- Ring colours follow BatteryBuddy's effective device thresholds; saved device
   profiles take precedence over global defaults. Saving settings updates the
-  colours immediately.
-- Clear offline, unavailable and unknown states instead of a misleading reading.
-- 10px default title font, with user-adjustable title and font controls.
+  ring immediately.
+- A generic icon and neutral ring for offline, unavailable, unknown or unselected
+  devices, rather than a misleading reading.
+- No generated key title by default, keeping text off the icon. Add a custom
+  title or image in Stream Deck if desired.
 - Local, read-only communication with BatteryBuddy; no HTTP server or telemetry.
 
-Keep the **Title** field empty for the automatic device name and percentage.
-A custom title replaces this text; a space can be used for an icon-only key.
-Custom images override the dynamic battery icon. Existing keys may retain
-previous font settings; long device names can still clip.
+The key title is empty by default. User-defined titles and custom images remain
+available in Stream Deck; a custom image replaces the dynamic battery icon.
 
 <img width="350" height="171" alt="BatteryBuddy-Plugin-Elgato_1" src="https://github.com/user-attachments/assets/8f016624-052d-42a2-8680-71e81b315e54" /> <img width="350" height="170" alt="BatteryBuddy-Plugin-Elgato_2" src="https://github.com/user-attachments/assets/7ea480d8-d2d4-445d-8568-4fcdfc3843aa" />
 <img width="225" height="500" alt="BatteryBuddy-Plugin-Elgato_3" src="https://github.com/user-attachments/assets/5df627d8-0cbd-4d03-8130-7fc66ab9acf3" />
 
+These screenshots show the earlier 1.1.0 interface; the live key artwork and
+default title behavior have since been updated.
+
 The interface follows Stream Deck's language: English, German, French, Spanish,
 Japanese, Korean, Simplified Chinese and Traditional Chinese. This includes the
-action name/tooltip, device selector and categories, status messages and generated
-key-state text. Device names and custom titles are not translated. Unsupported
-languages fall back to English; restart Stream Deck after changing its language.
-Translations are AI-reviewed drafts, not certified native-speaker translations.
+action name/tooltip, device selector and categories, and status messages.
+Custom titles are not translated. Unsupported languages fall back to English;
+restart Stream Deck after changing its language. Translations are AI-reviewed
+drafts, not certified native-speaker translations.
 
 Grey means a neutral state, or an older
 BatteryBuddy build that does not supply colours; update BatteryBuddy if

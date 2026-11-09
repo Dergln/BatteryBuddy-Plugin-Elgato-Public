@@ -81,7 +81,7 @@ export class BatteryAction extends SingletonAction<BatteryActionSettings> {
   }
 
   private async renderAction(action: KeyAction<BatteryActionSettings>, settings: BatteryActionSettings): Promise<void> {
-    const { title, image } = batteryDisplay(this.pipeState, settings.deviceId, (key) => streamDeck.i18n.translate(key));
+    const { title, image } = batteryDisplay(this.pipeState, settings.deviceId);
     await Promise.all([action.setImage(image), action.setTitle(title)]);
   }
 
