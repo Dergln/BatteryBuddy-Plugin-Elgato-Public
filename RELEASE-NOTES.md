@@ -8,7 +8,7 @@
   icons introduced in 1.2.0.
 - BatteryBuddy and its named-pipe protocol are unchanged.
 
-Requires BatteryBuddy 1.0.5 or newer and Stream Deck software 7.1 or newer.
+Requires BatteryBuddy 1.0.15 or newer and Stream Deck software 7.1 or newer.
 Install the `.streamDeckPlugin` asset by opening it in Stream Deck. No Elgato
 Marketplace submission is implied.
 
