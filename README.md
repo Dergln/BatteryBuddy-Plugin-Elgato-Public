@@ -80,6 +80,11 @@ The installer is written to `dist`. This repository contains curated released
 source, not private development history or internal test infrastructure.
 The source for each installer is available at its corresponding release tag.
 
+Public CI logs Node.js 24 and npm versions, keeps typechecking and production
+validation/packaging, and requires exactly one nonempty installer. Only
+superseded runs of the same pull request are cancelled; branch, tag and manually
+dispatched builds remain independent. The build job has a 15-minute deadline.
+
 ## Feedback
 
 Report ordinary bugs in [Issues](https://github.com/Dergln/BatteryBuddy-Plugin-Elgato-Public/issues).
