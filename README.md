@@ -6,7 +6,7 @@ by a colour-coded battery ring.
 
 ## Download and setup
 
-1. Install or update [BatteryBuddy](https://github.com/Dergln/BatteryBuddy-Public/releases/latest) to version 1.0.5 or newer.
+1. Install or update [BatteryBuddy](https://github.com/Dergln/BatteryBuddy-Public/releases/latest) to version 1.0.15 or newer.
 2. Download the `.streamDeckPlugin` installer from the [latest plugin release](https://github.com/Dergln/BatteryBuddy-Plugin-Elgato-Public/releases/latest).
 3. Open it to install through the Stream Deck desktop app.
 4. Start BatteryBuddy, add **BatteryBuddy Battery** to a key, and select a device.
