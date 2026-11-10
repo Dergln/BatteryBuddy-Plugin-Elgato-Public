@@ -11,17 +11,32 @@ on:
 permissions:
   contents: read
 
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event_name }}-${{ github.event.pull_request.number || github.run_id }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
+
 jobs:
   build:
     runs-on: windows-latest
     timeout-minutes: 15
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - uses: actions/checkout@v7.0.1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v7.1.0
         with:
           node-version: '24'
           cache: npm
+      - name: Runtime versions
+        run: |
+          node --version
+          npm --version
       - run: node .github/no-agent-control-files.mjs
       - run: npm ci
       - run: npm run typecheck
       - run: npm run pack
+      - name: Verify installer
+        shell: pwsh
+        run: |
+          $files = @(Get-ChildItem -LiteralPath dist -Filter *.streamDeckPlugin -File -ErrorAction Stop)
+          if ($files.Count -ne 1 -or $files[0].Length -eq 0) { throw 'Expected exactly one nonempty plugin installer.' }
