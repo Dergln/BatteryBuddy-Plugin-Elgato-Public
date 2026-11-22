@@ -36,13 +36,8 @@ available in Stream Deck; a custom image replaces the dynamic battery icon.
 The screenshots show the current key design and per-device setup, with examples
 of the live ring at different battery states.
 
-<img width="800" height="572" alt="Stream Deck showing the BatteryBuddy key and device selector" src="https://github.com/user-attachments/assets/4be03e2d-1e30-4f60-a1f0-a4d440ccab04" />
-
-<img width="800" height="341" alt="BatteryBuddy key with green and amber battery rings beside device settings" src="https://github.com/user-attachments/assets/5635633e-56e4-40fb-988a-34a0de2a6991" />
-
-<img width="800" height="341" alt="BatteryBuddy key with a red low-battery ring beside device settings" src="https://github.com/user-attachments/assets/7b7f7946-4fff-4629-b6a3-56fbeaf2f43f" />
-
-<img width="800" height="340" alt="BatteryBuddy key with a burgundy critical-battery ring beside device settings" src="https://github.com/user-attachments/assets/64890208-ccc0-4895-8a06-0b6ae6d92930" />
+<img width="450" height="253" alt="BatteryBuddy-Plugin-Elgato_0_thumbnail" src="https://github.com/user-attachments/assets/fd583193-c877-4aac-b200-ca8543cb156e" /> <img width="450" height="225" alt="BatteryBuddy-Plugin-Elgato_1_thumbnail" src="https://github.com/user-attachments/assets/344d7154-d9ef-4e9c-b3fe-d5511ce9f311" />
+<img width="450" height="225" alt="BatteryBuddy-Plugin-Elgato_2_Gallery" src="https://github.com/user-attachments/assets/1e6c36dc-2ff1-4b49-982b-b5a7d9422f40" /> <img width="450" height="225" alt="BatteryBuddy-Plugin-Elgato_3_Gallery" src="https://github.com/user-attachments/assets/cc457ba8-44f4-479f-8e78-cbdc0fe182a6" />
 
 The interface follows Stream Deck's language: English, German, French, Spanish,
 Japanese, Korean, Simplified Chinese and Traditional Chinese. This includes the
